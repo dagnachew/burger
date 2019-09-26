@@ -1,0 +1,41 @@
+.container {
+  border: 1px solid #e9ecef;
+  padding: 0;
+  margins: 0;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  /* background: #faebd7; */
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+span {
+  display: inline-block;
+  width: 350px;
+}
+
+.eatburger.btn.btn-warning {
+  display: inline;
+  background: #e9ecef;
+  outline-color: none;
+}
+
+p.lead {
+  display: inline-block;
+  width: 200px;
+}

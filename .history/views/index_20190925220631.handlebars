@@ -1,0 +1,52 @@
+<div class="container">
+
+    <div class="jumbotron p-0 py-5">
+        <h1 class="text-center mb-5">Eat-Da-Burger! </h1>
+        <img src="/assets/images/hamburger.png" alt="" style="width:200px" class="rounded mx-auto d-block">
+        <br>
+     
+        <div>
+            <form class="create-form text-center">
+                <div class="form-group ">
+                    <div class="form-group col-md-6 mx-auto">
+                        <label for="newburger" class="d-block"><p class="lead">Type in your Burger</p></label>
+                        <input type="text" id="newburger" name="burger" class="form-control">
+                        <button type="submit" class="btn btn-sm btn-light d-inline-block text-center  mt-2" id="addburger">Add Burger</button>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+                <div class="pl-5 ml-5">
+                    <span>
+                        {{#each burgers}}
+                        {{#unless this.devoured}}
+                        <p class="lead"> {{this.id}} - {{this.burger_name}}</p>
+                        <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
+                            data-newDevoured="{{devour}}">DEVOUR IT</button>
+                        <br>
+                        <br>
+                        {{/unless}}
+                        {{/each}}
+                    </span>
+                </div>
+            
+        </div>
+        <div class="col-sm-6">
+            <div class="pl-5 ml-5">
+                    <span>
+                        {{#each burgers}}
+                        {{#if this.devoured}}
+                        <p class="lead"> {{this.id}} - {{this.burger_name}}</p>
+                        {{/if}}
+                        {{/each}}
+                    </span>
+            </div>
+        </div>
+
+    </div>
+    <!--endrow -->
+</div>
